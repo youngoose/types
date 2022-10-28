@@ -4,28 +4,20 @@
 type Command = 'add' | 'subtract' | 'multiply' | 'divide' | 'remainder';
 
 const calculate = (command: Command, x: number, y: number): number => {
-  let result: number;
-
   switch (command) {
     case 'add':
-      result = x + y;
-      break;
+      return x + y;
     case 'subtract':
-      result = x - y;
-      break;
+      return x - y;
     case 'multiply':
-      result = x * y;
-      break;
+      return x * y;
     case 'divide':
-      result = x / y;
-      break;
+      return x / y;
     case 'remainder':
-      result = x % y;
-      break;
+      return x % y;
     default:
       throw Error('unknown command');
   }
-  return result;
 }
 
 console.log(calculate('add', 1, 3)); // 4
